@@ -257,21 +257,11 @@ form {
 	width: 100%;
 	margin: 0 auto;
 }
-label {
+label,
+.contact-links span {
 	opacity: 0.2;
 	text-transform: uppercase;
 	font-size: var(--label);
-}
-address {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
-	max-width: 500px;
-	margin: 50px auto 0;
-	text-align: left;
-	border-top: 2px dashed var(--green);
-	font-style: normal;
 }
 textarea {
 	max-width: 100%;
@@ -283,11 +273,25 @@ label[for="contact_message"] {
 	margin: var(--small-mp) 0;
 	text-align: right;
 }
+address {
+	max-width: 500px;
+	margin: 50px auto 0;
+	text-align: left;
+	border-top: 2px dashed var(--green);
+	font-style: normal;
+}
+address > div {
+	width: 100%;
+}
+.contact-links span{
+	display:inline-block;
+	width: 150px;
+}
 .contact-page button {
 	margin-top: 40px;
 }
 .contact-page .button__link {
-	flex-grow: 2;
+	margin-top:50px;
 }
 /* FOOTER */
 .page-footer {
