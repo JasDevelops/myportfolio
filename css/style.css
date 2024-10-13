@@ -40,6 +40,7 @@ section {
 h1 {
 	font-family: var(--title);
 	font-size: var(--h1);
+	letter-spacing:2px;
 }
 h2 {
 	font-family: var(--title);
@@ -66,7 +67,7 @@ button,
 .button__link {
 	background-color: var(--pink);
 	color: var(--dark);
-	font-family: inherit;
+	font-family: var(--title);
 	display: inline-block;
 	font-size: var(--text);
 	letter-spacing: 1px;
@@ -164,19 +165,30 @@ button:active,
 .profile {
 	max-width: 700px;
 	margin: var(--standard-margin) auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+.profile__portrait,
+.profile__text,
+.profile__button {
+	flex: 1 0 calc(50% - var(--standard-margin) );
+	align-items: center;
 }
 .profile__portrait {
-	float: left;
 	width: 100%;
 	height: auto;
 	max-width: 200px;
-	margin-right: 40px;
-	border-radius: 50%;
 }
 .profile__text {
 	text-align: center;
+	padding:0 30px;
 }
-
+.profile__button {
+	flex-basis: 100%;        
+    flex-grow: 0;             
+    flex-shrink: 0;
+	margin-top:50px
+}
 /* ABOUT */
 
 .about-page ul {
@@ -332,9 +344,9 @@ label[for="contact_message"] {
 	.navigation-list li {
 		margin: 0 auto;
 	}
-	.profile__portrait {
-		float: none;
-		margin: 0 auto;
+	.profile__portrait, .profile__text, .profile__button {
+		flex-basis: 100%;
+		margin: 0 auto
 	}
 	.work-list {
 		grid-gap: 10px;
