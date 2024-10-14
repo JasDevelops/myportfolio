@@ -16,11 +16,6 @@ main {
 	margin: 20px;
 }
 
-section {
-	text-align: center;
-	margin: 0 auto;
-}
-
 h1 {
 	font-family: "Bebas Neue", serif;
 	font-size: 35px;
@@ -53,7 +48,7 @@ a:active {
 	color: #0f0;
 }
 
-button {
+button{
 	background-color: #ef4357;
 	color: #161a1d;
 	font-family: "Bebas Neue", serif;
@@ -71,7 +66,7 @@ button {
 	transition: opacity 0.2s ease-in, box-shadow 0.3s ease;
 }
 
-.button__link {
+.button__link{
 	background-color: #ef4357;
 	color: #161a1d;
 	font-family: "Bebas Neue", serif;
@@ -88,21 +83,13 @@ button {
 	box-shadow: 4px 6px rgba(0, 0, 0, 0.8);
 	transition: opacity 0.2s ease-in, box-shadow 0.3s ease;
 }
-
-.button__secondary {
+.button__link{
 	background-color: #0f0;
-}
-
-.button__link {
-	background-color: #0f0;
-}
-
-.button__link {
 	display: inline-block;
 	text-align: center;
 }
 
-.button__link a {
+.button__link a{
 	color: #161a1d;
 	border-bottom: none;
 }

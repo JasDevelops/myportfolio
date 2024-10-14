@@ -36,11 +36,6 @@ main {
 	margin: var(--standard-margin);
 }
 
-section {
-	text-align: center;
-	margin: 0 auto;
-}
-
 h1 {
 	font-family: var(--title);
 	font-size: var(--h1);
@@ -74,7 +69,7 @@ a:active {
 }
 
 button,
-.button__link {
+.button__link{
 	background-color: var(--pink);
 	color: var(--dark);
 	font-family: var(--title);
@@ -91,18 +86,13 @@ button,
 	box-shadow: 4px 6px var(--black08);
 	transition: opacity 0.2s ease-in, box-shadow 0.3s ease;
 }
-
-.button__secondary,
-.button__link {
+.button__link{
 	background-color: var(--green);
-}
-
-.button__link {
 	display: inline-block;
 	text-align: center;
 }
 
-.button__link a {
+.button__link a{
 	color: var(--dark);
 	border-bottom: none;
 }
