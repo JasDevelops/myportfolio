@@ -192,7 +192,7 @@ button:active,
 	align-items: center;
 }
 
-.profile__portrait {
+.profile__portrait svg{
 	width: 100%;
 	height: auto;
 	max-width: 200px;
