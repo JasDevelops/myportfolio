@@ -298,6 +298,7 @@ label,
 
 textarea {
 	max-width: 100%;
+	width:100%;
 }
 
 label[for="contact_message"] {
