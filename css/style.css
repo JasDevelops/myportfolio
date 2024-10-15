@@ -30,11 +30,18 @@ body {
 	font-size: var(--text);
 	line-height: 1.5;
 	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
-
+.container {
+	text-align:center;
+	max-width:1200px;
+	margin: 0 auto;
+}
 main {
 	margin: var(--standard-margin);
-	text-align:center;
+	flex:1;
 }
 
 h1 {
@@ -115,30 +122,30 @@ button:active,
 
 /* HEADER */
 
-.page-header {
-	display: flex;
-	flex-wrap: wrap;
+.page-header{
 	width: 100%;
 	max-width: 100%;
-	margin: 0 auto;
 	padding: var(--standard-padding);
 	background-color: var(--black03);
 }
-
+.page-header .container {
+	display: flex;
+	flex-wrap: wrap;
+}
 .page-header__item {
 	flex: 0 1 100px;
 	padding: var(--small-mp);
 	margin: var(--small-mp);
 }
 
-.page-header__item:first-child {
+.logo {
 	max-width: 300px;
 	height: 100%;
 	width: 100%;
 	flex-basis: 300px;
 }
 
-.page-header__item:last-child {
+.main-navigation {
 	flex-grow: 1;
 	text-align: right;
 }
@@ -347,7 +354,10 @@ address > div {
 	left: 0;
 	width: 100%;
 }
-
+.page-footer a {
+	font-size:11px;
+	text-transform: uppercase;
+}
 .social-media img {
 	width: 30px;
 	height: 30px;
@@ -373,8 +383,8 @@ address > div {
 /* MEDIA QUERIES */
 
 @media all and (max-width: 992px) {
-	.page-header__item {
-		flex: 0 1 auto;
+	.main-navigation {
+		text-align: center;
 	}
 
 	.navigation-list li a {
@@ -405,7 +415,7 @@ address > div {
 		margin: 0 auto;
 	}
 
-	.profile__portrait, .profile__text, .profile__button {
+	.profile__portrait svg, .profile__text, .profile__button {
 		flex-basis: 100%;
 		margin: 0 auto;
 	}
