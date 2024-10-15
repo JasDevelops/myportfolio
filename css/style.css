@@ -257,7 +257,7 @@ button:active,
 }
 
 .ffm__text {
-	animation: 2s move-in alternate linear;
+	animation: 2s move-in alternate linear ease-in;
 }
 /* WORK */
 
@@ -448,6 +448,9 @@ address > div {
 	.work-list {
 		grid-template-columns: 1fr;
 	}
+	.contact-links span {
+		display:block;
+	}
 }
 
 @media all and (max-width: 350px) {
@@ -484,16 +487,12 @@ address > div {
 	}
 }
 @keyframes pulsate {
-	0% {
+	0%, 100% {
 		transform: scale(1);
 	}
 
 	50% {
 		transform: scale(1.05);
-	}
-
-	100% {
-		transform: scale(1);
 	}
 }
 
@@ -537,28 +536,23 @@ address > div {
 
 @keyframes move-in {
 	0% {
-		animation-timing-function: ease-in;
 		opacity: 0;
 		transform: translateX(-1000px);
 	}
 
 	80% {
-		animation-timing-function: ease-in;
 		transform: translateY(-8px);
 	}
 
 	85% {
-		animation-timing-function: ease-in;
 		transform: translateY(1px);
 	}
 
 	90% {
-		animation-timing-function: ease-in;
 		transform: translateY(-5px);
 	}
 
 	98% {
-		animation-timing-function: ease-in;
 		transform: translateY(0.5px);
 	}
 
