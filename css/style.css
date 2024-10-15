@@ -17,7 +17,6 @@
 	--standard-padding: 10px;
 	--small-mp: 5px;
 }
-
 * {
 	box-sizing: border-box;
 }
@@ -205,7 +204,7 @@ button:active,
 	max-width: 200px;
 }
 .avatar-bg {
-	animation:  2s blink-on infinite alternate ease-in-out ;
+	animation:  1.5s blink-on infinite alternate ease-in-out ;
 	transform-origin: center; 
 }
 .avatar-cheek_ri,
@@ -465,18 +464,16 @@ address > div {
 	}
 }
 @keyframes blink-on {
-	0% {
+	0%, 100% {
 		transform: scale(1);
+		opacity:1;
 	}
 
 	50% {
-		transform: scale(0.99);
+		transform: scale(0.98);
+		opacity:0.4;
 	}
-
-	100% {
-		transform: scale(1);
-	}
-	}
+}
 @keyframes mini-pulsate {
     0%   { 
 		stroke: var(--pink);
