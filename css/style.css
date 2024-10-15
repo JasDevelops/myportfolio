@@ -204,7 +204,14 @@ button:active,
 	height: auto;
 	max-width: 200px;
 }
-
+.avatar-bg {
+	animation:  2s blink-on infinite alternate ease-in-out ;
+	transform-origin: center; 
+}
+.avatar-cheek_ri,
+.avatar-cheek_le {
+	animation: 1s mini-pulsate infinite alternate ease-in-out;
+}
 .profile__text {
 	text-align: center;
 	padding: 0 30px;
@@ -457,7 +464,28 @@ address > div {
 		margin: var(--small-mp) 0;
 	}
 }
+@keyframes blink-on {
+	0% {
+		transform: scale(1);
+	}
 
+	50% {
+		transform: scale(0.99);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+	}
+@keyframes mini-pulsate {
+    0%   { 
+		stroke: var(--pink);
+		stroke-width: 3; 
+	}
+    100% { 
+		stroke: none; 
+	}
+}
 @keyframes pulsate {
 	0% {
 		transform: scale(1);
