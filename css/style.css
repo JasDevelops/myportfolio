@@ -337,7 +337,8 @@ textarea {
 }
 
 label[for="contact_message"] {
-	float: left;
+	display:block;
+	text-align: left;
 }
 
 .contact_info {
@@ -478,8 +479,12 @@ address > div {
 	.work-list {
 		grid-template-columns: 1fr;
 	}
-	.contact-links span {
+	.contact-links span,
+	label {
 		display:block;
+	}
+	.contact_info {
+		text-align:left;
 	}
 }
 
