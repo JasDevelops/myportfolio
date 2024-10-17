@@ -178,8 +178,8 @@ button:active,
 	animation: pulsate 1s ease infinite;
 }
 
-.navigation-list__item--active {
-	opacity: 0.3;
+.main-navigation .navigation-list li a.navigation-list__item--active {	
+	border-bottom: 2px solid var(--pink);
 }
 
 /* HOMEPAGE */
