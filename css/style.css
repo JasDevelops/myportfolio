@@ -295,7 +295,7 @@ button:active,
 	min-height: 260px;
 }
 /* end grid fallback */
-@supp orts (display: grid) {
+@supports (display: grid) {
 	.work-list {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -427,7 +427,7 @@ address > div {
 		width: 47%;
 	}
 
-	@su pports (display:grid){
+	@supports (display:grid){
 	.work-list {
 		grid-template-columns: 1fr 1fr;
 	}
