@@ -5,6 +5,7 @@
 	--green: #0f0;
 	--yellow: #ff0;
 	--blue: #0ef;
+	--gray:#adaba9;
 	--black03: rgba(0, 0, 0, 0.3);
 	--black08: rgba(0, 0, 0, 0.8);
 	--title: "Bebas Neue", serif;
@@ -325,8 +326,8 @@ form {
 
 label,
 .contact-links span {
-	opacity: 0.2;
-	text-transform: uppercase;
+	color: var(--gray);
+	text-transform: lowercase;
 	font-size: var(--label);
 }
 
