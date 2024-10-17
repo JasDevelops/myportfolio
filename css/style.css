@@ -286,10 +286,16 @@ button:active,
 /* start grid fallback */
 .work-list__item {
 	display: inline-block;
-	width: 25%;
+	width: 23%;
+	background-color: var(--black03);
+	border: 2px solid var(--green);
+	padding: var(--standard-padding);
+	margin: 1%;
+	vertical-align:top;
+	min-height: 260px;
 }
 /* end grid fallback */
-@supports (display: grid) {
+@supp orts (display: grid) {
 	.work-list {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -297,12 +303,10 @@ button:active,
 	}
 
 	.work-list__item {
-		background-color: var(--black03);
-		border: 2px solid var(--green);
 		margin: 0;
-		padding: var(--standard-padding);
 		width: auto;
 		height: auto;
+		min-height: auto;
 		display: flex;
 		flex-direction: column;
 	}
@@ -419,7 +423,11 @@ address > div {
 	.navigation-list li a {
 		letter-spacing: 0;
 	}
+	.work-list__item {
+		width: 47%;
+	}
 
+	@su pports (display:grid){
 	.work-list {
 		grid-template-columns: 1fr 1fr;
 	}
@@ -428,6 +436,7 @@ address > div {
 	.work-list__item:nth-child(6) {
 		grid-column-start: auto;
 	}
+}
 }
 
 @media all and (max-width: 768px) {
@@ -447,6 +456,11 @@ address > div {
 		flex-basis: 100%;
 		margin: 0 auto;
 	}
+	.work-list__item {
+		width: 100%;
+		margin: var(--small-mp) auto;
+		min-height:auto;
+	}
 @supports (display:grid){
 	.profile {
 		grid-template-columns: 1fr;
@@ -456,7 +470,6 @@ address > div {
 		grid-column: 1 / 2;
 		grid-row: auto;
 	}
-}
 	.work-list {
 		grid-gap: 10px;
 	}
@@ -465,6 +478,8 @@ address > div {
 		grid-column: auto / auto;
 		grid-row: auto / auto;
 	}
+}
+
 
 	h1 {
 		font-size: var(--h2);
