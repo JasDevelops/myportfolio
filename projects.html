@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description"
             content="Jasmin's Portfolio Webpage, that showcases my work and progress during my CareerFoundry Course">
-        <title>Jasmin's Portfolio - Contact</title>
+        <title>Jasmin's Portfolio - Projects</title>
         <link rel="shortcut icon" href="img/favicon.png">
         <link rel="'stylesheet" type="text/css"
             href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -32,51 +32,45 @@
                             <a href="./about.html" role="menuitem" class="navigation-list__item">About me</a>
                         </li>
                         <li role="presentation">
-                            <a href="./projects.html" role="menuitem" class="navigation-list__item">Projects</a>
+                            <a href="./projects.html" role="menuitem"
+                                class="navigation-list__item navigation-list__item--active">Projects</a>
                         </li>
                         <li role="presentation">
-                            <a href="./contact.html" role="menuitem"
-                                class="navigation-list__item navigation-list__item--active">Contact</a>
+                            <a href="./contact.html" role="menuitem" class="navigation-list__item">Contact</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <main class="contact-page">
+        <main class="work-page">
             <div class="container">
-                <h1>Contact me</h1>
-                <form action="#" method="post" id="contact_form">
-                    <label for="contact_message">Message:</label>
-                    <textarea rows="10" cols="60" name="contact_message" id="contact_message">Your message...</textarea>
-                    <br>
-                    <div class="contact_info">
-                        <label for="contact_name">Name:</label>
-                        <input type="text" id="contact_name" name="contact_name" placeholder="Your name ...">
+                <h1>Projects</h1>
+                <div class="work-list">
+                    <div class="work-list__item MiniMon">
+                        <a href="./MiniMon.html" class="project-link">
+                            <div class="work-list__inner">
+                                <h2>MiniMon</h2>
+                                <p>a simple JavaScript project</p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="contact_info">
-                        <label for="contact_email">Email (required):</label>
-                        <input type="email" id="contact_email" name="contact_email" placeholder="Your email ..."
-                            required>
-                        <br>
+                    <div class="work-list__item DojoDB">
+                        <a href="./DojoDB.html" class="project-link">
+                            <div class="work-list__inner">
+                                <h2>DojoDB</h2>
+                                <p>a full-stack movie database</p>
+                            </div>
+                        </a>
                     </div>
-                    <button type="submit" value="Send message"> Send message </button>
-                </form>
-                <address>
-                    <div class="contact-address">
-                        <p> Jasmin Sander <br> Frankfurt a. M. <br> Germany </p>
+                    <div class="work-list__item Eventify">
+                        <a href="./Eventify.html" class="project-link">
+                            <div class="work-list__inner">
+                                <h2>Eventify</h2>
+                                <p>a serverless Progressive Web App</p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="contact-links">
-                        <span>Telephone:</span>
-                        <a href="tel:+491758797447">+49 123 456 78 90</a>
-                        <br>
-                        <span>Mail:</span>
-                        <a href="mailto:madebyjas@gmail.com">madebyjas (at) gmail (dot) com</a>
-                        <br>
-                    </div>
-                    <div class="button__link">
-                        <a href="mailto:madebyjas@gmail.com" target="_blank" rel="noreferrer">Contact me</a>
-                    </div>
-                </address>
+                </div>
             </div>
         </main>
         <footer class="page-footer">
