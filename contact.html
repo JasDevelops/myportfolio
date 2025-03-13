@@ -45,36 +45,30 @@
         <main class="contact-page">
             <div class="container">
                 <h1>Contact me</h1>
-                <form action="#" method="post" id="contact_form">
-                    <label for="contact_message">Message:</label>
-                    <textarea rows="10" cols="60" name="contact_message" id="contact_message">Your message...</textarea>
-                    <br>
-                    <div class="contact_info">
-                        <label for="contact_name">Name:</label>
-                        <input type="text" id="contact_name" name="contact_name" placeholder="Your name ...">
+                <form action="https://formspree.io/f/xldjekwq" method="post" id="contact_form">
+                    <div class="contact_top">
+                        <label for="contact_message">Message:</label>
+                        <textarea rows="10" cols="60" name="contact_message" id="contact_message"
+                            onfocus="this.placeholder=''" onblur="this.placeholder='Your message...'"></textarea>
                     </div>
-                    <div class="contact_info">
-                        <label for="contact_email">Email (required):</label>
-                        <input type="email" id="contact_email" name="contact_email" placeholder="Your email ..."
-                            required>
-                        <br>
+                    <div class="contact_bottom">
+                        <div class="contact_info">
+                            <label for="contact_name">Name:</label>
+                            <input type="text" id="contact_name" name="contact_name">
+                        </div>
+                        <div class="contact_info">
+                            <label for="contact_email">Email (required):</label>
+                            <input type="email" id="contact_email" name="contact_email" required>
+                        </div>
+                        <button type="submit" value="Send message"> Send message </button>
                     </div>
-                    <button type="submit" value="Send message"> Send message </button>
                 </form>
                 <address>
                     <div class="contact-address">
-                        <p> Jasmin Sander <br> Frankfurt a. M. <br> Germany </p>
+                        <h3> Jasmin Sander </h3>
+                        <p>Frankfurt a. M. - GERMANY </p>
                     </div>
                     <div class="contact-links">
-                        <span>Telephone:</span>
-                        <a href="tel:+491758797447">+49 123 456 78 90</a>
-                        <br>
-                        <span>Mail:</span>
-                        <a href="mailto:madebyjas@gmail.com">madebyjas (at) gmail (dot) com</a>
-                        <br>
-                    </div>
-                    <div class="button__link">
-                        <a href="mailto:madebyjas@gmail.com" target="_blank" rel="noreferrer">Contact me</a>
                     </div>
                 </address>
             </div>
