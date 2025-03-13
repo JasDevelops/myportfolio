@@ -7,7 +7,7 @@
 	--blue: #0ef;
 	--gray: #adaba9;
 	--black03: rgba(0, 0, 0, 0.3);
-	--black08: rgba(0, 0, 0, 0.8);
+	--black08: rgba(0, 0, 0, 0.85);
 	--black09: rgba(0, 0, 0, 0.95);
 	--title: 'Bebas Neue', serif;
 	--body: 'Montserrat', serif;
@@ -359,7 +359,7 @@ button:active,
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: var(--black09);
+	background-color: var(--black08);
 }
 .work-list__item {
 	background-size: cover;
@@ -372,6 +372,15 @@ button:active,
 }
 .MiniMon {
 	background-image: url(../img/MiniMon.png);
+}
+.DojoDB-API {
+	background-image: url(../img/DojoDB-API.png);
+}
+.Chatterbox {
+	background-image: url(../img/Chatterbox.png);
+}
+.ShadowKick {
+	background-image: url(../img/ShadowKick.png);
 }
 .work-list__inner {
 	position: relative;
@@ -389,11 +398,11 @@ button:active,
 	color: var(--pink);
 }
 /* PROJECT SINGLE */
-
 .project-img {
 	margin-top: var(--medium-margin);
 }
-.project-img img {
+.project-img img,
+.video-box video {
 	border: 2px solid var(--green);
 	padding: var(--standard-padding);
 	max-width: 100%;
@@ -434,6 +443,17 @@ h4 {
 	justify-content: center;
 	gap: var(--standard-margin);
 }
+video {
+	width: 500px;
+	max-width: 90%;
+}
+.video-box label {
+	display: block;
+	font-size: var(--text);
+	font-family: var(--title);
+	letter-spacing: 1px;
+	color: var(--green);
+}
 /*CONTACT*/
 form {
 	max-width: 500px;
@@ -447,22 +467,30 @@ label,
 	text-transform: lowercase;
 	font-size: var(--label);
 }
-
+textarea,
+input {
+	border-radius: 0;
+	line-height: 180%;
+	border: 2px solid var(--green);
+	padding: 5px;
+	font-family: var(--body);
+}
 textarea {
 	max-width: 100%;
 	width: 100%;
 }
 
-label[for='contact_message'] {
+label {
 	display: block;
 	text-align: left;
 }
-
 .contact_info {
 	margin: var(--small-mp) 0;
 	text-align: right;
 }
-
+.contact-address p {
+	text-align: center;
+}
 address {
 	max-width: 500px;
 	margin: 50px auto 0;
@@ -480,12 +508,16 @@ address > div {
 	width: 150px;
 }
 
-.contact-page button {
-	margin-top: 40px;
-}
-
 .contact-page .button__link {
 	margin-top: 50px;
+}
+input:focus-visible,
+textarea:focus-visible {
+	outline: 2px solid var(--blue);
+}
+.contact_bottom {
+	display: flex;
+	justify-content: space-between;
 }
 /* FOOTER */
 .page-footer {
