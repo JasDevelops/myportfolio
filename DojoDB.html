@@ -21,15 +21,21 @@
     <body>
         <header class="page-header">
             <div class="container">
-                <img src="img/JasDevelops_logo.svg" alt="Personal Logo of Jasmin. A text logo of the name."
-                    class="logo page-header__item">
-                <nav class="main-navigation page-header__item">
+                <img id="theme-logo" src="img/logo-dark.svg" data-light="img/JasDevelops_logo_dark.svg"
+                    data-dark="img/JasDevelops_logo.svg" alt="Jasmin's personal logo" class="logo page-header__item">
+                <!-- Hamburger Menu (Mobile) -->
+                <button id="menu-toggle" class="hamburger-menu" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <nav class="main-navigation page-header__item" aria-label="Main Navigation">
                     <ul role="menubar" class="navigation-list">
                         <li role="presentation">
                             <a href="./index.html" role="menuitem" class="navigation-list__item">Home</a>
                         </li>
                         <li role="presentation">
-                            <a href="./about.html" role="menuitem" class="navigation-list__item">About me</a>
+                            <a href="./about.html" role="menuitem" class="navigation-list__item">About </a>
                         </li>
                         <li role="presentation">
                             <a href="./projects.html" role="menuitem"
@@ -40,6 +46,17 @@
                         </li>
                     </ul>
                 </nav>
+            </div>
+            <!-- Theme Toggle (dark/light) -->
+            <div class="theme-toggle">
+                <label class="theme-switch">
+                    <input type="checkbox" id="toggle" onclick="toggle_light_theme()">
+                    <span class="slider">
+                        <img src="img/moon.svg" alt="Dark Mode" class="icon moon">
+                        <img src="img/sun.svg" alt="Light Mode" class="icon sun">
+                        <span class="knob"></span>
+                    </span>
+                </label>
             </div>
         </header>
         <main class="project-sg-page">
@@ -59,44 +76,48 @@
                             <h3>Project Objective</h3>
                             <p>DojoDB-client is built to provide an engaging and user-friendly platform where movie
                                 lovers can: </p>
-                            <ul>
-                                <li>Browse and search a curated collection of martial arts movies</li>
-                                <li>View detailed information about movies, directors, and actors</li>
-                                <li>Filter movies by title, genre, release year, actor, or director</li>
-                                <li>Create an account, manage their profile, and maintain a personal favorites list</li>
-                                <li>Enjoy a clean, responsive UI with intuitive navigation</li>
+                            <ul role="list">
+                                <li role="listitem">Browse and search a curated collection of martial arts movies</li>
+                                <li role="listitem">View detailed information about movies, directors, and actors</li>
+                                <li role="listitem">Filter movies by title, genre, release year, actor, or director</li>
+                                <li role="listitem">Create an account, manage their profile, and maintain a personal
+                                    favorites list</li>
+                                <li role="listitem">Enjoy a clean, responsive UI with intuitive navigation</li>
                             </ul>
                         </div>
                         <div class="project-inner">
                             <h3>Technology Behind DojoDB</h3>
                             <h4>Frontend (DojoDB-client)</h4>
-                            <ul>
-                                <li><span>React</span> - For a dynamic and interactive user experience </li>
-                                <li><span>React Router</span> - For seamless navigation </li>
-                                <li><span>Redux</span> - For efficient state management </li>
-                                <li><span>Bootstrap 5.3 &amp; SASS</span> - For responsive styling and UI components
+                            <ul role="list">
+                                <li role="listitem"><span>React</span> - For a dynamic and interactive user experience
                                 </li>
-                                <li><span>Parcel</span> - Fast and efficient bundling </li>
-                                <li><span>Netlify</span> - For easy frontend deployment </li>
+                                <li role="listitem"><span>React Router</span> - For seamless navigation </li>
+                                <li role="listitem"><span>Redux</span> - For efficient state management </li>
+                                <li role="listitem"><span>Bootstrap 5.3 &amp; SASS</span> - For responsive styling and
+                                    UI components </li>
+                                <li role="listitem"><span>Parcel</span> - Fast and efficient bundling </li>
+                                <li role="listitem"><span>Netlify</span> - For easy frontend deployment </li>
                             </ul>
                             <h4>Backend (DojoDB-API)</h4>
                             <p>The frontend connects to DojoDB API, a RESTful backend that provides real-time movie data
                                 and handles user authentication. It is built using:</p>
-                            <ul>
-                                <li><span>Node.js &amp; Express</span> - For handling API requests </li>
-                                <li><span>MongoDB &amp; Mongoose</span> - For storing and managing movie/user data </li>
-                                <li><span>JWT &amp; Passport.js</span> - For secure authentication </li>
-                                <li><span>CORS</span> - To enable cross-origin API requests</li>
-                                <li><span>MongoDB Atlas</span> - Cloud-based database storage </li>
-                                <li><span>Heroku</span> - For backend deployment </li>
+                            <ul role="list">
+                                <li role="listitem"><span>Node.js &amp; Express</span> - For handling API requests </li>
+                                <li role="listitem"><span>MongoDB &amp; Mongoose</span> - For storing and managing
+                                    movie/user data </li>
+                                <li role="listitem"><span>JWT &amp; Passport.js</span> - For secure authentication </li>
+                                <li role="listitem"><span>CORS</span> - To enable cross-origin API requests</li>
+                                <li role="listitem"><span>MongoDB Atlas</span> - Cloud-based database storage </li>
+                                <li role="listitem"><span>Heroku</span> - For backend deployment </li>
                             </ul>
                         </div>
                     </div>
                     <div class="btn-box">
                         <div class="button__link project__button"><a href="https://github.com/JasDevelops/DojoDB-client"
-                                target="_blank" rel="noreferrer">DojoDB-client on GitHub</a></div>
+                                target="_blank" rel="noopener noreferrer">DojoDB-client on GitHub</a></div>
                         <div class="button__link project__button"><a href="https://dojodb.netlify.app/" target="_blank"
-                                rel="noreferrer">Live website</a></div>
+                                rel="noopener noreferrer" aria-label="Visit the live DojoDB movie app">Live website</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -104,12 +125,14 @@
         <footer class="page-footer">
             <div class="container">
                 <div class="social-media">
-                    <a href="https://github.com/JasDevelops" target="_blank" rel="noreferrer">
-                        <img src="img/github.svg" alt="Github icon">
+                    <a href="https://github.com/JasDevelops" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit Jasmin's GitHub profile"> <img src="img/github.svg"
+                            alt="GitHub icon linking to Jasmin's GitHub profile">
                     </a>
                 </div>
             </div>
         </footer>
+        <script src="js/script.js"></script>
     </body>
 
 </html>

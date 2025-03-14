@@ -21,15 +21,21 @@
     <body>
         <header class="page-header">
             <div class="container">
-                <img src="img/JasDevelops_logo.svg" alt="Personal Logo of Jasmin. A text logo of the name."
-                    class="logo page-header__item">
-                <nav class="main-navigation page-header__item">
+                <img id="theme-logo" src="img/logo-dark.svg" data-light="img/JasDevelops_logo_dark.svg"
+                    data-dark="img/JasDevelops_logo.svg" alt="Jasmin's personal logo" class="logo page-header__item">
+                <!-- Hamburger Menu (Mobile) -->
+                <button id="menu-toggle" class="hamburger-menu" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <nav class="main-navigation page-header__item" aria-label="Main Navigation">
                     <ul role="menubar" class="navigation-list">
                         <li role="presentation">
                             <a href="./index.html" role="menuitem" class="navigation-list__item">Home</a>
                         </li>
                         <li role="presentation">
-                            <a href="./about.html" role="menuitem" class="navigation-list__item">About me</a>
+                            <a href="./about.html" role="menuitem" class="navigation-list__item">About </a>
                         </li>
                         <li role="presentation">
                             <a href="./projects.html" role="menuitem"
@@ -40,6 +46,17 @@
                         </li>
                     </ul>
                 </nav>
+            </div>
+            <!-- Theme Toggle (dark/light) -->
+            <div class="theme-toggle">
+                <label class="theme-switch">
+                    <input type="checkbox" id="toggle" onclick="toggle_light_theme()">
+                    <span class="slider">
+                        <img src="img/moon.svg" alt="Dark Mode" class="icon moon">
+                        <img src="img/sun.svg" alt="Light Mode" class="icon sun">
+                        <span class="knob"></span>
+                    </span>
+                </label>
             </div>
         </header>
         <main class="project-sg-page">
@@ -58,12 +75,14 @@
                             <h3>Project Objective</h3>
                             <p>The goal of Eventify is to make event discovery simple and accessible anytime, anywhere.
                                 Built with a Test-Driven Development (TDD) approach, the app offers features like:</p>
-                            <ul>
-                                <li>Search for events by city</li>
-                                <li>View event details &amp; manage how many events are displayed</li>
-                                <li>Offline functionality - access cached events without an internet connection</li>
-                                <li>Add the app to your home screen for quick access</li>
-                                <li>Interactive charts to visualize event trends by city &amp; category</li>
+                            <ul role="list">
+                                <li role="listitem">Search for events by city</li>
+                                <li role="listitem">View event details &amp; manage how many events are displayed</li>
+                                <li role="listitem">Offline functionality - access cached events without an internet
+                                    connection</li>
+                                <li role="listitem">Add the app to your home screen for quick access</li>
+                                <li role="listitem">Interactive charts to visualize event trends by city &amp; category
+                                </li>
                             </ul>
                         </div>
                         <div class="project-inner">
@@ -71,24 +90,28 @@
                             <p>Eventify is lightweight, easy to use, and works across devices, making event discovery
                                 more convenient than ever. To ensure smooth performance and reliability, Eventify is
                                 built using: </p>
-                            <ul>
-                                <li><span>React</span> - A fast, responsive front-end framework</li>
-                                <li><span>AWS Lambda</span> - A serverless backend for handling data requests</li>
-                                <li><span> Google Calendar API</span> - Fetching real-time event data </li>
-                                <li><span>Jest &amp; Cucumber</span> - Ensuring quality through rigorous testing</li>
-                                <li><span>OAuth2</span> - Secure authentication </li>
-                                <li><span>Recharts</span> - For beautiful data visualizations</li>
-                                <li><span>Service Workers</span> - Enabling offline access</li>
-                                <li><span>Vercel</span> - For deployment </li>
+                            <ul role="list">
+                                <li role="listitem"><span>React</span> - A fast, responsive front-end framework</li>
+                                <li role="listitem"><span>AWS Lambda</span> - A serverless backend for handling data
+                                    requests</li>
+                                <li role="listitem"><span> Google Calendar API</span> - Fetching real-time event data
+                                </li>
+                                <li role="listitem"><span>Jest &amp; Cucumber</span> - Ensuring quality through rigorous
+                                    testing</li>
+                                <li role="listitem"><span>OAuth2</span> - Secure authentication </li>
+                                <li role="listitem"><span>Recharts</span> - For beautiful data visualizations</li>
+                                <li role="listitem"><span>Service Workers</span> - Enabling offline access</li>
+                                <li role="listitem"><span>Vercel</span> - For deployment </li>
                             </ul>
                         </div>
                     </div>
                     <div class="btn-box">
                         <div class="button__link project__button"><a href="https://github.com/JasDevelops/eventify"
-                                target="_blank" rel="noreferrer">Eventify on GitHub</a>
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="View the Eventify source code on GitHub">Eventify on GitHub</a>
                         </div>
                         <div class="button__link project__button"><a href="https://eventify-amber.vercel.app/"
-                                target="_blank" rel="noreferrer">Live website</a>
+                                target="_blank" aria-label="Visit the live Eventify app">Live website</a>
                         </div>
                     </div>
                 </div>
@@ -97,12 +120,14 @@
         <footer class="page-footer">
             <div class="container">
                 <div class="social-media">
-                    <a href="https://github.com/JasDevelops" target="_blank" rel="noreferrer">
-                        <img src="img/github.svg" alt="Github icon">
+                    <a href="https://github.com/JasDevelops" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit Jasmin's GitHub profile"> <img src="img/github.svg"
+                            alt="GitHub icon linking to Jasmin's GitHub profile">
                     </a>
                 </div>
             </div>
         </footer>
+        <script src="js/script.js"></script>
     </body>
 
 </html>

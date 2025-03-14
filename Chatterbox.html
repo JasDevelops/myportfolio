@@ -21,15 +21,21 @@
     <body>
         <header class="page-header">
             <div class="container">
-                <img src="img/JasDevelops_logo.svg" alt="Personal Logo of Jasmin. A text logo of the name."
-                    class="logo page-header__item">
-                <nav class="main-navigation page-header__item">
+                <img id="theme-logo" src="img/logo-dark.svg" data-light="img/JasDevelops_logo_dark.svg"
+                    data-dark="img/JasDevelops_logo.svg" alt="Jasmin's personal logo" class="logo page-header__item">
+                <!-- Hamburger Menu (Mobile) -->
+                <button id="menu-toggle" class="hamburger-menu" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <nav class="main-navigation page-header__item" aria-label="Main Navigation">
                     <ul role="menubar" class="navigation-list">
                         <li role="presentation">
                             <a href="./index.html" role="menuitem" class="navigation-list__item">Home</a>
                         </li>
                         <li role="presentation">
-                            <a href="./about.html" role="menuitem" class="navigation-list__item">About me</a>
+                            <a href="./about.html" role="menuitem" class="navigation-list__item">About </a>
                         </li>
                         <li role="presentation">
                             <a href="./projects.html" role="menuitem"
@@ -40,6 +46,17 @@
                         </li>
                     </ul>
                 </nav>
+            </div>
+            <!-- Theme Toggle (dark/light) -->
+            <div class="theme-toggle">
+                <label class="theme-switch">
+                    <input type="checkbox" id="toggle" onclick="toggle_light_theme()">
+                    <span class="slider">
+                        <img src="img/moon.svg" alt="Dark Mode" class="icon moon">
+                        <img src="img/sun.svg" alt="Light Mode" class="icon sun">
+                        <span class="knob"></span>
+                    </span>
+                </label>
             </div>
         </header>
         <main class="project-sg-page">
@@ -57,29 +74,32 @@
                         <div class="project-inner">
                             <h3>Project Objective</h3>
                             <p>The goal of Chatterbox is to provide a seamless chat experience with features like:</p>
-                            <ul>
-                                <li>Real-time messaging with Firestore</li>
-                                <li>Offline message storage using AsyncStorage</li>
-                                <li>Support for sending images, audio messages, and location sharing</li>
-                                <li>Anonymous login via Firebase Authentication</li>
-                                <li>Custom audio player for recorded messages</li>
+                            <ul role="list">
+                                <li role="listitem">Real-time messaging with Firestore</li>
+                                <li role="listitem">Offline message storage using AsyncStorage</li>
+                                <li role="listitem">Support for sending images, audio messages, and location sharing
+                                </li>
+                                <li role="listitem">Anonymous login via Firebase Authentication</li>
+                                <li role="listitem">Custom audio player for recorded messages</li>
                             </ul>
                         </div>
                         <div class="project-inner">
                             <h3>Technology Behind Chatterbox</h3>
-                            <ul>
-                                <li><span>React Native</span> - Framework for cross-platform mobile development</li>
-                                <li><span>Expo</span> - Simplified development and testing</li>
-                                <li><span>Firebase Firestore</span> - Real-time cloud database</li>
-                                <li><span>Firebase Authentication</span> - Secure user login</li>
-                                <li><span>Gifted Chat</span> - Library for chat UI components</li>
-                                <li><span>AsyncStorage</span> - Local storage for offline functionality</li>
+                            <ul role="list">
+                                <li role="listitem"><span>React Native</span> - Framework for cross-platform mobile
+                                    development</li>
+                                <li role="listitem"><span>Expo</span> - Simplified development and testing</li>
+                                <li role="listitem"><span>Firebase Firestore</span> - Real-time cloud database</li>
+                                <li role="listitem"><span>Firebase Authentication</span> - Secure user login</li>
+                                <li role="listitem"><span>Gifted Chat</span> - Library for chat UI components</li>
+                                <li role="listitem"><span>AsyncStorage</span> - Local storage for offline functionality
+                                </li>
                             </ul>
                         </div>
                     </div>
                     <div class="video-box">
-                        <label for="video">Demonstration video</label>
-                        <video id="video" controls>
+                        <label id="video-label" for="video">Demonstration video</label>
+                        <video id="video" controls aria-labelledby="video-label">
                             <source src="img/chatterbox.webm" type="video/webm"> Your browser does not support the video
                             tag.
                         </video>
@@ -87,7 +107,8 @@
                     <div class="btn-box">
                         <div class="button__link project__button">
                             <a href="https://github.com/JasDevelops/Chatterbox" target="_blank"
-                                rel="noreferrer">Chatterbox on GitHub</a>
+                                rel="noopener noreferrer"
+                                aria-label="View the Chatterbox source code on GitHub">Chatterbox on GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -96,12 +117,14 @@
         <footer class="page-footer">
             <div class="container">
                 <div class="social-media">
-                    <a href="https://github.com/JasDevelops" target="_blank" rel="noreferrer">
-                        <img src="img/github.svg" alt="Github icon">
+                    <a href="https://github.com/JasDevelops" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit Jasmin's GitHub profile"> <img src="img/github.svg"
+                            alt="GitHub icon linking to Jasmin's GitHub profile">
                     </a>
                 </div>
             </div>
         </footer>
+        <script src="js/script.js"></script>
     </body>
 
 </html>

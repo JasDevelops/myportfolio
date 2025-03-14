@@ -21,15 +21,21 @@
     <body>
         <header class="page-header">
             <div class="container">
-                <img src="img/JasDevelops_logo.svg" alt="Personal Logo of Jasmin. A text logo of the name."
-                    class="logo page-header__item">
-                <nav class="main-navigation page-header__item">
+                <img id="theme-logo" src="img/logo-dark.svg" data-light="img/JasDevelops_logo_dark.svg"
+                    data-dark="img/JasDevelops_logo.svg" alt="Jasmin's personal logo" class="logo page-header__item">
+                <!-- Hamburger Menu (Mobile) -->
+                <button id="menu-toggle" class="hamburger-menu" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <nav class="main-navigation page-header__item" aria-label="Main Navigation">
                     <ul role="menubar" class="navigation-list">
                         <li role="presentation">
                             <a href="./index.html" role="menuitem" class="navigation-list__item">Home</a>
                         </li>
                         <li role="presentation">
-                            <a href="./about.html" role="menuitem" class="navigation-list__item">About me</a>
+                            <a href="./about.html" role="menuitem" class="navigation-list__item">About </a>
                         </li>
                         <li role="presentation">
                             <a href="./projects.html" role="menuitem"
@@ -40,6 +46,17 @@
                         </li>
                     </ul>
                 </nav>
+            </div>
+            <!-- Theme Toggle (dark/light) -->
+            <div class="theme-toggle">
+                <label class="theme-switch">
+                    <input type="checkbox" id="toggle" onclick="toggle_light_theme()">
+                    <span class="slider">
+                        <img src="img/moon.svg" alt="Dark Mode" class="icon moon">
+                        <img src="img/sun.svg" alt="Light Mode" class="icon sun">
+                        <span class="knob"></span>
+                    </span>
+                </label>
             </div>
         </header>
         <main class="project-sg-page">
@@ -58,33 +75,38 @@
                             <h3>Project Objective</h3>
                             <p>MiniMon is designed to make Pokémon exploration easy and engaging while demonstrating key
                                 JavaScript functionalities. The app allows users to:</p>
-                            <ul>
-                                <li>Browse a dynamically loaded list of Pokémon</li>
-                                <li>View Pokémon details (name, height, and image) in a Bootstrap-powered modal</li>
-                                <li>Search for specific Pokémon by name</li>
-                                <li>Sort Pokémon by name or height</li>
-                                <li>Swipe through Pokémon within the modal</li>
-                                <li>Enjoy a responsive design with a smooth navigation bar and toggle menu</li>
+                            <ul role="list">
+                                <li role="listitem">Browse a dynamically loaded list of Pokémon</li>
+                                <li role="listitem">View Pokémon details (name, height, and image) in a
+                                    Bootstrap-powered modal</li>
+                                <li role="listitem">Search for specific Pokémon by name</li>
+                                <li role="listitem">Sort Pokémon by name or height</li>
+                                <li role="listitem">Swipe through Pokémon within the modal</li>
+                                <li role="listitem">Enjoy a responsive design with a smooth navigation bar and toggle
+                                    menu</li>
                             </ul>
                         </div>
                         <div class="project-inner">
                             <h3>Technology Behind MiniMon</h3>
                             <p>To ensure a smooth and efficient user experience, MiniMon is built using:</p>
-                            <ul>
-                                <li><span>JavaScript (ES6)</span> - Handles API requests, DOM manipulation, and event
-                                    handling </li>
-                                <li><span>HTML5 &amp; CSS3</span> - Provides structure and styling</li>
-                                <li><span>Bootstrap 5.3</span> - Ensures a responsive layout and interactive modals</li>
-                                <li><span>PokéAPI</span> - Fetches real-time Pokémon data</li>
-                                <li><span>GitHub Pages</span> - Hosts the application </li>
+                            <ul role="list">
+                                <li role="listitem"><span>JavaScript (ES6)</span> - Handles API requests, DOM
+                                    manipulation, and event handling </li>
+                                <li role="listitem"><span>HTML5 &amp; CSS3</span> - Provides structure and styling</li>
+                                <li role="listitem"><span>Bootstrap 5.3</span> - Ensures a responsive layout and
+                                    interactive modals</li>
+                                <li role="listitem"><span>PokéAPI</span> - Fetches real-time Pokémon data</li>
+                                <li role="listitem"><span>GitHub Pages</span> - Hosts the application </li>
                             </ul>
                         </div>
                     </div>
                     <div class="btn-box">
                         <div class="button__link project__button"><a href="https://github.com/JasDevelops/MiniMon"
-                                target="_blank" rel="noreferrer">MiniMon on GitHub</a></div>
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label="View the MiniMon source code on GitHub">MiniMon on GitHub</a></div>
                         <div class="button__link project__button"><a href="https://jasdevelops.github.io/MiniMon"
-                                target="_blank" rel="noreferrer">Live website</a></div>
+                                target="_blank" rel="noopener noreferrer" aria-label="Visit the live MiniMon app">Live
+                                website</a></div>
                     </div>
                 </div>
             </div>
@@ -92,12 +114,14 @@
         <footer class="page-footer">
             <div class="container">
                 <div class="social-media">
-                    <a href="https://github.com/JasDevelops" target="_blank" rel="noreferrer">
-                        <img src="img/github.svg" alt="Github icon">
+                    <a href="https://github.com/JasDevelops" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit Jasmin's GitHub profile"> <img src="img/github.svg"
+                            alt="GitHub icon linking to Jasmin's GitHub profile">
                     </a>
                 </div>
             </div>
         </footer>
+        <script src="js/script.js"></script>
     </body>
 
 </html>
