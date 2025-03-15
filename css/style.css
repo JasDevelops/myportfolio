@@ -181,7 +181,7 @@ body[data-theme='light'] .page-header {
 }
 
 .logo {
-	max-width: 180px;
+	max-width: 250px;
 	height: auto;
 }
 .main-navigation {
@@ -196,7 +196,7 @@ body[data-theme='light'] .page-header {
 	gap: 20px;
 	align-items: center;
 	padding: 0;
-	margin: 0;
+	margin: 0 70px 0 0 !important;
 }
 
 .navigation-list li {
@@ -295,7 +295,7 @@ body[data-theme='light'] .hamburger-menu .bar {
 }
 .slider {
 	position: absolute;
-	top: 5px;
+	top: 10px;
 	cursor: pointer;
 	background-color: var(--gray01);
 	width: 100%;
@@ -325,14 +325,14 @@ body[data-theme='light'] .hamburger-menu .bar {
 /* Sun icon (should be visible in dark mode) */
 .sun {
 	right: 8px;
-	opacity: 1;
+	opacity: 0.3;
 	transition: opacity 0.3s ease-in-out;
 }
 .knob {
 	position: absolute;
 	width: 20px;
 	height: 20px;
-	background-color: var(--offwhite);
+	background-color: var(--dark);
 	border-radius: 50%;
 	top: 2px;
 	transition: transform 0.4s;
@@ -340,11 +340,12 @@ body[data-theme='light'] .hamburger-menu .bar {
 }
 /* When checkbox is checked (Light Mode) */
 .theme-switch input:checked + .slider {
-	background-color: var(--black03);
+	background-color: var(--gray08);
 }
 /* Move knob right in light mode */
 .theme-switch input:checked + .slider .knob {
 	transform: translateX(40px);
+	background-color: var(--offwhite);
 }
 
 .theme-switch input:checked + .slider .moon {
@@ -658,11 +659,16 @@ address > div {
 	width: 100%;
 }
 
-.contact-links span {
+/* .contact-links span {
 	display: inline-block;
 	width: 150px;
+} */
+.contact-page h3 {
+	margin-bottom: 0;
 }
-
+.contact-links {
+	text-align: center;
+}
 .contact-page .button__link {
 	margin-top: 50px;
 }
@@ -692,27 +698,34 @@ body[data-theme='light'] .page-footer {
 	text-transform: uppercase;
 }
 
-.social-media img {
+.social-media img,
+.contact-links img {
 	width: 30px;
 	height: 30px;
 }
-body[data-theme='light'] .social-media img {
+body[data-theme='light'] .social-media img,
+body[data-theme='light'] .contact-links img {
 	filter: invert(1);
 }
-.social-media a {
+.social-media a,
+.contact-links a {
 	border: none;
 }
 
 .social-media a:hover,
-.social-media a:focus {
+.social-media a:focus,
+.contact-links a:hover,
+.contact-links a:focus {
 	opacity: 0.7;
 }
 
-.social-media a:visited {
+.social-media a:visited,
+.contact-links a:visited {
 	opacity: 0.6;
 }
 
-.social-media a:active {
+.social-media a:active,
+.contact-links a:active {
 	opacity: 0.4;
 }
 
@@ -744,20 +757,7 @@ body[data-theme='light'] .social-media img {
 		}
 	}
 }
-
-@media all and (max-width: 768px) {
-	h1 {
-		font-size: var(--h2);
-	}
-	h2 {
-		font-size: var(--h3);
-	}
-	h3 {
-		font-size: var(--h4);
-	}
-	h4 {
-		font-size: var(--h5);
-	}
+@media all and (max-width: 830px) {
 	.hamburger-menu {
 		display: flex;
 	}
@@ -791,6 +791,20 @@ body[data-theme='light'] .social-media img {
 	.slider {
 		right: 50px;
 		top: -3px;
+	}
+}
+@media all and (max-width: 768px) {
+	h1 {
+		font-size: var(--h2);
+	}
+	h2 {
+		font-size: var(--h3);
+	}
+	h3 {
+		font-size: var(--h4);
+	}
+	h4 {
+		font-size: var(--h5);
 	}
 
 	.profile__portrait svg,
