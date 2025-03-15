@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="509"
+   height="509"
+   viewBox="0 0 134.67291 134.67291"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="moon.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#2a2a2a"
+     inkscape:document-units="px"
+     showguides="false"><sodipodi:guide
+       position="3.6732903,-117.44681"
+       orientation="-1,0"
+       id="guide4"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" /><sodipodi:guide
+       position="22.351013,-126.74703"
+       orientation="0,1"
+       id="guide5"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" /><inkscape:page
+       x="0"
+       y="0"
+       width="134.67291"
+       height="134.67291"
+       id="page2"
+       margin="0"
+       bleed="0" /></sodipodi:namedview><defs
+     id="defs1" /><path
+     id="path57"
+     style="fill:#fffaf3;stroke:none;stroke-width:0.793753;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
+     d="M 67.336457,1.5130354e-5 A 67.336456,67.336456 0 0 0 4.1399808e-7,67.336486 67.336456,67.336456 0 0 0 67.336457,134.67294 67.336456,67.336456 0 0 0 134.67291,67.336486 67.336456,67.336456 0 0 0 67.336457,1.5130354e-5 Z M 36.269103,35.586476 h 18.50223 l 16.041398,23.34639 20.084561,-23.34639 h 5.481319 l -23.130887,26.88829 h -0.0016 l 25.157637,36.61172 H 79.901531 L 62.960447,74.432176 41.750889,99.086486 h -5.481836 l 24.257951,-28.1957 z m 7.456909,4.12688 19.555912,27.97298 2.457731,3.51554 v 0.001 l 16.741097,23.94479 h 8.419124 L 70.385367,65.803756 67.927119,62.288216 52.145136,39.713356 Z" /></svg>

@@ -21,60 +21,78 @@
     <body>
         <header class="page-header">
             <div class="container">
-                <img src="img/JasDevelops_logo.svg" alt="Personal Logo of Jasmin. A text logo of the name."
-                    class="logo page-header__item">
-                <nav class="main-navigation page-header__item">
+                <img id="theme-logo" src="img/logo-dark.svg" data-light="img/JasDevelops_logo_dark.svg"
+                    data-dark="img/JasDevelops_logo.svg" alt="Jasmin's personal logo" class="logo page-header__item">
+                <!-- Hamburger Menu (Mobile) -->
+                <button id="menu-toggle" class="hamburger-menu" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <nav class="main-navigation page-header__item" aria-label="Main Navigation">
                     <ul role="menubar" class="navigation-list">
                         <li role="presentation">
                             <a href="./index.html" role="menuitem" class="navigation-list__item">Home</a>
                         </li>
                         <li role="presentation">
-                            <a href="./about.html" role="menuitem" class="navigation-list__item">About me</a>
+                            <a href="./about.html" role="menuitem" class="navigation-list__item">About </a>
                         </li>
                         <li role="presentation">
                             <a href="./projects.html" role="menuitem" class="navigation-list__item">Projects</a>
                         </li>
                         <li role="presentation">
                             <a href="./contact.html" role="menuitem"
-                                class="navigation-list__item navigation-list__item--active">Contact</a>
+                                class="navigation-list__item navigation-list__item--active"
+                                aria-current="page">Contact</a>
                         </li>
                     </ul>
                 </nav>
+            </div>
+            <!-- Theme Toggle (dark/light) -->
+            <div class="theme-toggle">
+                <label class="theme-switch">
+                    <input type="checkbox" id="toggle" onclick="toggle_light_theme()">
+                    <span class="slider">
+                        <img src="img/moon.svg" alt="Dark Mode" class="icon moon">
+                        <img src="img/sun.svg" alt="Light Mode" class="icon sun">
+                        <span class="knob"></span>
+                    </span>
+                </label>
             </div>
         </header>
         <main class="contact-page">
             <div class="container">
                 <h1>Contact me</h1>
-                <form action="#" method="post" id="contact_form">
-                    <label for="contact_message">Message:</label>
-                    <textarea rows="10" cols="60" name="contact_message" id="contact_message">Your message...</textarea>
-                    <br>
-                    <div class="contact_info">
-                        <label for="contact_name">Name:</label>
-                        <input type="text" id="contact_name" name="contact_name" placeholder="Your name ...">
+                <form action="https://formspree.io/f/xldjekwq" method="post" id="contact_form">
+                    <div class="contact_top">
+                        <label for="contact_message">Message:</label>
+                        <textarea rows="10" cols="60" name="contact_message" id="contact_message"
+                            onfocus="this.placeholder=''" onblur="this.placeholder='Your message...'"></textarea>
                     </div>
-                    <div class="contact_info">
-                        <label for="contact_email">Email (required):</label>
-                        <input type="email" id="contact_email" name="contact_email" placeholder="Your email ..."
-                            required>
-                        <br>
+                    <div class="contact_bottom">
+                        <div class="contact_info">
+                            <label for="contact_name">Name:</label>
+                            <input type="text" id="contact_name" name="contact_name">
+                        </div>
+                        <div class="contact_info">
+                            <label for="contact_email">Email (required):</label>
+                            <input type="email" id="contact_email" name="contact_email" required>
+                        </div>
+                        <button type="submit" value="Send message"> Send message </button>
                     </div>
-                    <button type="submit" value="Send message"> Send message </button>
                 </form>
                 <address>
                     <div class="contact-address">
-                        <p> Jasmin Sander <br> Frankfurt a. M. <br> Germany </p>
+                        <h3> Jasmin Sander </h3>
+                        <p>based in Frankfurt a. M. - GERMANY </p>
                     </div>
                     <div class="contact-links">
-                        <span>Telephone:</span>
-                        <a href="tel:+491758797447">+49 123 456 78 90</a>
-                        <br>
-                        <span>Mail:</span>
-                        <a href="mailto:madebyjas@gmail.com">madebyjas (at) gmail (dot) com</a>
-                        <br>
-                    </div>
-                    <div class="button__link">
-                        <a href="mailto:madebyjas@gmail.com" target="_blank" rel="noreferrer">Contact me</a>
+                        <span>
+                            <a href="https://www.linkedin.com/in/jasmin-s-2232ab99/" target="_blank"
+                                rel="noopener noreferrer" aria-label="Visit Jasmin's LinkedIn profile"> <img
+                                    src="img/linkedin.svg" alt="LinkedIn icon linking to Jasmin's LinkedIn profile">
+                            </a>
+                        </span>
                     </div>
                 </address>
             </div>
@@ -82,12 +100,14 @@
         <footer class="page-footer">
             <div class="container">
                 <div class="social-media">
-                    <a href="https://github.com/JasDevelops" target="_blank" rel="noreferrer">
-                        <img src="img/github.svg" alt="Github icon">
+                    <a href="https://github.com/JasDevelops" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit Jasmin's GitHub profile"> <img src="img/github.svg"
+                            alt="GitHub icon linking to Jasmin's GitHub profile">
                     </a>
                 </div>
             </div>
         </footer>
+        <script src="js/script.js"></script>
     </body>
 
 </html>
