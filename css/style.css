@@ -185,7 +185,8 @@ body[data-theme='light'] .page-header {
 }
 
 .logo {
-	max-width: 250px;
+	width: 250px;
+	max-width: 100%;
 	height: auto;
 }
 .main-navigation {
@@ -201,7 +202,7 @@ body[data-theme='light'] .page-header {
 	gap: 20px;
 	align-items: center;
 	padding: 0;
-	margin: 0 70px 0 0 !important;
+	margin: 0 70px 0 0;
 }
 
 .navigation-list li {
@@ -243,7 +244,7 @@ body[data-theme='light'] .page-header {
 	padding: 10px;
 	z-index: 11000;
 	position: absolute;
-	top: 0;
+	top: 7.5px;
 	right: 5px;
 	box-shadow: none;
 	border-radius: 0;
@@ -671,7 +672,8 @@ address > div {
 	margin-bottom: 0;
 }
 .contact-links {
-	text-align: center;
+	display: flex;
+	justify-content: center;
 }
 .contact-page .button__link {
 	margin-top: 50px;
@@ -799,6 +801,7 @@ body[data-theme='light'] .contact-links img {
 	.navigation-list {
 		flex-direction: column;
 		gap: 15px;
+		margin-right: 0;
 	}
 
 	.navigation-list li {
@@ -806,7 +809,7 @@ body[data-theme='light'] .contact-links img {
 	}
 	.slider {
 		right: 50px;
-		top: -3px;
+		top: 3.5px;
 	}
 }
 @media all and (max-width: 768px) {
@@ -859,36 +862,49 @@ body[data-theme='light'] .contact-links img {
 		}
 	}
 }
-
-@media all and (max-width: 480px) {
-	.page-header__item:last-child {
-		text-align: center;
+@media all and (max-width: 500px) {
+	.page-header .container {
+		display: block;
+		margin-top: 50px;
 	}
+	.contact_bottom {
+		flex-wrap: wrap;
+	}
+	.contact_bottom button {
+		margin-left: auto;
+	}
+	.contact_info:first-child {
+		margin-right: 10px;
+	}
+}
+@media all and (max-width: 480px) {
 	@supports (display: grid) {
 		.work-list {
 			grid-template-columns: 1fr;
 		}
 	}
-
 	.contact-links span,
 	label {
 		display: block;
 	}
-
 	.contact_info {
 		text-align: left;
+	}
+	.page-footer .container {
+		flex-flow: column nowrap;
 	}
 }
 
 @media all and (max-width: 350px) {
-	.page-header__item:last-child {
-		text-align: right;
-	}
-
-	.navigation-list {
+	.contact_bottom {
 		flex-flow: column nowrap;
 	}
-
+	.contact_info {
+		margin-left: auto;
+	}
+	.contact_info:first-child {
+		margin-right: 0;
+	}
 	.navigation-list li {
 		margin: var(--small-mp) 0;
 	}
