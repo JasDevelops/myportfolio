@@ -121,6 +121,16 @@ span.italic {
 	text-transform: none !important;
 	color: var(--offwhite) !important;
 }
+body[data-theme='light'] span.bold,
+body[data-theme='light'] span.italic {
+	color: var(--dark) !important;
+}
+.pink {
+	color: var(--pink);
+}
+.align-center {
+	text-align: center !important;
+}
 .hidden {
 	display: none;
 }
@@ -656,25 +666,28 @@ body[data-theme='light'] .project-link p {
 	flex-wrap: wrap;
 	gap: 15px;
 }
-.project-descr ul {
+.project-descr ul,
+.cs-inner ul {
 	text-align: left;
 	list-style: none;
 	padding-left: var(--standard-margin);
 }
-.project-descr ul ul {
+.cs-inner ul ul {
 	margin-left: 30px;
 }
-.project-descr li {
+.project-descr li,
+.cs-inner li {
 	margin: 10px 0;
 	position: relative;
 }
-.project-descr li::before {
+.project-descr li::before,
+.cs-inner li::before {
 	content: '•';
 	color: var(--pink);
 	position: absolute;
 	left: -20px;
 }
-.project-descr ul ul li::before {
+.cs-inner ul ul li::before {
 	content: '•';
 	color: var(--blue);
 }
@@ -701,7 +714,8 @@ video {
 	width: 500px;
 	max-width: 90%;
 }
-.video-box label {
+.video-box label,
+.cs-inner figcaption {
 	display: block;
 	font-size: var(--text);
 	font-family: var(--title);
@@ -710,6 +724,9 @@ video {
 	text-align: center;
 }
 /*Case study*/
+.cs-inner {
+	text-align: left;
+}
 .cs-item {
 	display: block;
 }
@@ -721,30 +738,42 @@ video {
 	font-size: 25px;
 }
 .cs-inner ul {
-	max-width: 700px;
+	max-width: 900px;
 	margin: 0 auto;
 }
-
+.cs-inner ul p {
+	margin-top: 0;
+}
 .project-flex {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	gap: 20px;
+	gap: 30px;
 }
 .half_width {
-	flex: 1 1 calc(50% - 20px);
+	flex: 1 1 calc(50% - 30px);
+}
+.fullwidth {
+	width: 100%;
 }
 .cs-inner .half_width h3 {
 	margin-top: 50px;
 }
 .cs-inner img {
-	max-width: 700px;
+	max-width: 90%;
 	max-height: 700px;
+	width: 700px;
+}
+.cs-inner .project-img,
+.video-box {
+	text-align: center;
 }
 .cs-inner span {
 	color: var(--pink);
 }
-
+.cs-inner ul {
+	padding: 10px;
+}
 /*CONTACT*/
 form {
 	max-width: 500px;
