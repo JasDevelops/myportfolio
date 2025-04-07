@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="Jasmin's Portfolio Webpage, showcasing my work and progress during my CareerFoundry Course">
+        <title>Jasmin's Portfolio - Chatterbox</title>
+        <link rel="shortcut icon" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    <body>
+        <header class="page-header">
+            <div class="container">
+                <img id="theme-logo" src="img/logo-dark.svg" data-light="img/JasDevelops_logo_dark.svg"
+                    data-dark="img/JasDevelops_logo.svg" alt="Jasmin's personal logo" class="logo page-header__item">
+                <!-- Hamburger Menu (Mobile) -->
+                <button id="menu-toggle" class="hamburger-menu" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <nav class="main-navigation page-header__item" aria-label="Main Navigation">
+                    <ul role="menubar" class="navigation-list">
+                        <li role="presentation">
+                            <a href="./index.html" role="menuitem" class="navigation-list__item">Home</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="./about.html" role="menuitem" class="navigation-list__item">About </a>
+                        </li>
+                        <li role="presentation" class="nav-dropdown">
+                            <a href="./projects.html" role="menuitem"
+                                class="navigation-list__item navigation-list__item--active"
+                                aria-current="page">Projects</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="MiniMon.html">MiniMon</a></li>
+                                <li><a href="DojoDB.html">DojoDB</a></li>
+                                <li><a href="DojoDB-API.html">DojoDB API</a></li>
+                                <li><a href="Eventify.html">Eventify</a></li>
+                                <li><a href="Chatterbox.html">Chatterbox</a></li>
+                                <li><a href="ShadowKick.html">ShadowKick</a></li>
+                                <li class="menu_cs"><a href="CaseStudy.html">Case Study - DojoDB</a></li>
+                            </ul>
+                        </li>
+                        <li role="presentation">
+                            <a href="./contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Theme Toggle (dark/light) -->
+            <div class="theme-toggle">
+                <label class="theme-switch">
+                    <input type="checkbox" id="toggle" onclick="toggle_light_theme()">
+                    <span class="slider">
+                        <img src="img/moon.svg" alt="Dark Mode" class="icon moon">
+                        <img src="img/sun.svg" alt="Light Mode" class="icon sun">
+                        <span class="knob"></span>
+                    </span>
+                </label>
+            </div>
+        </header>
+        <main class="casestudy-sg-page">
+            <div class="container">
+                <div class="project-container">
+                    <h1>Case Study - DojoDB</h1>
+                    <div class="project-item project-descr cs-item">
+                        <h2>Introduction</h2>
+                        <div class="cs-inner">
+                            <div class=" fullwidth">
+                                <h3>Project Overview</h3>
+                                <p><span class="bold">DojoDB</span> is a movie database web application developed as
+                                    part of the <span class="italic"> CareerFoundry Full-Stack Web Development
+                                        program</span>. The project required building a complete web application with
+                                    two primary components:</p>
+                                <ul>
+                                    <li><span>Backend:</span> A RESTful API (using <span
+                                            class="bold">Node.js/Express</span> and <span class="bold">MongoDB</span>)
+                                        for managing movie data and user authentication.</li>
+                                    <li><span>Frontend:</span> A <span class="bold">React</span>-based frontend that
+                                        allows users to browse, filter, and save their favorite movies.</li>
+                                </ul>
+                                <div class="project-item project-img">
+                                    <img src="img/CS_DojoDB_1.png" alt="Screenshot of various DojoDB pages" />
+                                </div>
+                            </div>
+                            <div class="project-flex">
+                                <div class=" half_width">
+                                    <h3>Purpose & Context</h3>
+                                    <p>The main goal of DojoDB was to master <span class="bold">full-stack
+                                            development</span> by creating a functional application from scratch, as
+                                        guided by the CareerFoundry curriculum.</p>
+                                    <p> While the focus was on technical challenges—such as <span
+                                            class="bold">API</span> design, <span class="bold">state management</span>,
+                                        and <span class="bold">user authentication</span> — the process also reinforced
+                                        a disciplined approach to organizing and presenting information.</p>
+                                    <p>This emphasis on <span class="bold">clarity and usability</span> is a quality
+                                        that resonates across various digital platforms.</p>
+                                    <br>
+                                    <p>The project was split into two tasks:</p>
+                                    <ul>
+                                        <li><span>Backend (Nov 15 – Dec 6):</span> Developed a secure, <span
+                                                class="bold">RESTful API</span> with features including user
+                                            registration and data management.</li>
+                                        <li><span>Frontend (Dec 9 – Jan 11):</span> Created a dynamic <span
+                                                class="bold">React</span> interface featuring movie filtering, a
+                                            favorites function, and responsive design, with a brief holiday break in
+                                            between. </li>
+                                    </ul>
+                                </div>
+                                <div class=" half_width">
+                                    <h3>Objective</h3>
+                                    <p>The objective was to build a robust, full-stack solution that not only
+                                        demonstrated <span class="bold">technical proficiency</span> in modern web
+                                        development but also underscored the importance of a <span class="bold">clear,
+                                            well-structured</span> presentation of information.</p>
+                                    <p> This approach is essential in creating digital experiences that are both
+                                        functional and engaging. </p>
+                                    <h3>Role & Duration</h3>
+                                    <p>I developed DojoDB as the <span class="bold">sole developer</span> within the
+                                        guided framework provided by CareerFoundry.</p>
+                                    <p>The project spanned roughly <span class="bold">two months (mid-November to
+                                            mid-January)</span>, offering valuable insights into both back-end and
+                                        front-end technologies while emphasizing systematic content organization.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-item project-descr cs-item">
+                            <h2>Process</h2>
+                            <div class="cs-inner">
+                                <div class=" fullwidth">
+                                    <h3>Planning & Setup</h3>
+                                    <p>At the outset, I laid the groundwork for <span class="bold">DojoDB</span> by
+                                        outlining the overall architecture and defining the key functionalities of the
+                                        application. This included:</p>
+                                    <ul>
+                                        <li>Mapping out the <span class="bold">RESTful API endpoints</span> and
+                                            identifying the <span class="bold">data models</span> (movies, users, etc.).
+                                        </li>
+                                        <li>Creating <span class="bold">wireframes</span> to visualize the user
+                                            journey—especially for features like filtering and favoriting movies.</li>
+                                    </ul>
+                                </div>
+                                <div class="project-flex">
+                                    <div class=" half_width">
+                                        <h3>Backend Development</h3>
+                                        <p>During the backend phase, I focused on constructing a robust and secure
+                                            RESTful API.</p>
+                                        <div class="project-item project-img">
+                                            <img src="img/CS_DojoDB_API.jpg"
+                                                alt="Photo of handwritten note of API table structure" />
+                                        </div>
+                                        <ul>
+                                            <li><span>Technologies & Tools:</span> I used <span
+                                                    class="bold">Node.js</span> and <span class="bold">Express</span> to
+                                                build the API, coupled with <span class="bold">MongoDB</span> for data
+                                                storage.</li>
+                                            <li><span>Core Features:</span> The API supports user <span class="bold">
+                                                    registration, login, and secure authentication </span>, as well as
+                                                <span class="bold">endpoints</span> for managing movie data. </li>
+                                            <li><span>Challenges & Solutions:</span></li>
+                                            <ul>
+                                                <li><span class="bold">User Authentication:</span> Implementing a <span
+                                                        class="bold">secure</span> authentication system was a primary
+                                                    challenge. I integrated <span class="bold">token-based
+                                                        authentication</span> to ensure safe user sessions.</li>
+                                                <li><span class="bold">Data Structuring:</span> Defining <span
+                                                        class="bold"> clear and scalable data models </span> for movies
+                                                    and users required careful planning and testing. </li>
+                                            </ul>
+                                        </ul>
+                                        <p>This phase reinforced my understanding of server-side logic and laid a solid
+                                            foundation for the frontend integration.</p>
+                                    </div>
+                                    <div class=" half_width">
+                                        <h3>Frontend Development</h3>
+                                        <p>Following the backend phase — and after a brief holiday break — the focus
+                                            shifted to building the frontend using <span class="bold">React</span>.</p>
+                                        <div class="project-item project-img">
+                                            <img src="img/CS_DojoDB_wireframe.jpg"
+                                                alt="Photo of handdrawn wireframe sketch of the homepage layout" />
+                                        </div>
+                                        <ul>
+                                            <li><span>Interface & Features:</span></li>
+                                            <ul>
+                                                <li>Developed a <span class="bold">dynamic and responsive user
+                                                        interface</span> that displays movies, supports filtering based
+                                                    on various criteria, and includes a favorites functionality for
+                                                    personalized user experiences.</li>
+                                                <li>Implemented smooth navigation between different views, such as the
+                                                    movie listing, detailed views, and user account pages.</li>
+                                            </ul>
+                                            <li><span>Challenges & Solutions:</span></li>
+                                            <ul>
+                                                <li><span class="bold">State Management:</span> Handling dynamic content
+                                                    and user interactions in React required careful state management,
+                                                    which I addressed using <span class="bold">built-in hooks</span>.
+                                                </li>
+                                                <li><span class="bold">Responsive Design:</span> Ensuring that the <span
+                                                        class="bold">UI</span> was optimized for various devices, from
+                                                    desktops to mobile, was crucial. I incorporated responsive design
+                                                    principles throughout. </li>
+                                            </ul>
+                                        </ul>
+                                        <p>The frontend phase was a great opportunity to translate the backend data into
+                                            an engaging, user-friendly interface.</p>
+                                    </div>
+                                </div>
+                                <div class=" fullwidth">
+                                    <h3>Testing & Iteration</h3>
+                                    <p>Throughout both phases, I conducted regular testing and iterations to refine the
+                                        application:</p>
+                                    <ul>
+                                        <li><span>Manual Testing & Debugging:</span> Frequent testing sessions helped
+                                            identify and resolve issues in both API endpoints and React components.</li>
+                                        <li><span>Iterative Improvements:</span> Based on test results, I made targeted
+                                            improvements—optimizing API responses, streamlining UI interactions, and
+                                            refining the favorites feature to enhance user engagement.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-item project-descr cs-item">
+                            <h2>Conclusion</h2>
+                            <div class="cs-inner">
+                                <div class=" fullwidth">
+                                    <h3>Final Outcome & Results</h3>
+                                    <p><span class="bold">DojoDB</span> culminated in a fully functional movie database
+                                        application that seamlessly integrates a secure RESTful API with a responsive
+                                        React frontend.</p>
+                                    <p>The app not only allows users to browse and filter a collection of movies but
+                                        also includes a personalized favorites feature that enhances user engagement.
+                                    </p>
+                                    <p>Overall, the project successfully met the full-stack development objectives set
+                                        by the CareerFoundry curriculum.</p>
+                                </div>
+                                <div class="video-box">
+                                    <label id="video-label" for="video">Demonstration video</label>
+                                    <video id="video" controls aria-labelledby="video-label">
+                                        <source src="img/CS_DojoDB_rec.mp4" type="video/mp4"> Your browser does not
+                                        support the video tag.
+                                    </video>
+                                </div>
+                                <div class="project-flex">
+                                    <div class=" half_width">
+                                        <h3>Challenges & Lessons</h3>
+                                        <p>Learned Throughout the development process, I encountered and overcame
+                                            several challenges:</p>
+                                        <ul>
+                                            <li><span>User Authentication & Data Structuring:</span> Implementing a
+                                                secure, token-based authentication system and designing scalable data
+                                                models were key hurdles that deepened my understanding of backend
+                                                development.</li>
+                                            <li><span>State Management & Responsive Design:</span> On the frontend,
+                                                ensuring smooth interactions and responsiveness across devices required
+                                                careful state management and a thoughtful application of responsive
+                                                design principles. These experiences reinforced the importance of
+                                                systematic planning, regular testing, and iterative
+                                                improvements—practices that continue to inform my approach to digital
+                                                content and web development.</li>
+                                        </ul>
+                                    </div>
+                                    <div class=" half_width">
+                                        <h3>Future Directions</h3>
+                                        <p>Looking ahead, there are several enhancements that could further elevate
+                                            DojoDB: </p>
+                                        <ul>
+                                            <li><span>Database Expansion:</span> Enrich the application by adding a
+                                                broader range of movie entries to offer users an even more diverse
+                                                selection.</li>
+                                            <li><span>Enhanced User Engagement:</span> Features such as user reviews or
+                                                recommendations based on favorites
+                                            <li><span>Performance Optimization: </span>Further refining API responses
+                                                and front-end performance would ensure a smoother, more scalable
+                                                application. </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item project-descr cs-item">
+                        <div class="cs-inner">
+                            <p>By reflecting on these challenges and successes, DojoDB not only stands as a testament to
+                                my technical skills but also illustrates a commitment to continuous improvement—an
+                                approach that remains central to my work. </p>
+                            <div class="btn-box">
+                                <div class="button__link project__button"><a
+                                        href="https://github.com/JasDevelops/DojoDB-client" target="_blank"
+                                        rel="noopener noreferrer">DojoDB-client on GitHub</a></div>
+                                <div class="button__link project__button"><a href="https://dojodb.netlify.app/"
+                                        target="_blank" rel="noopener noreferrer"
+                                        aria-label="Visit the live DojoDB movie app">Live website</a>
+                                </div>
+                            </div>
+                            <div class="btn-box">
+                                <div class="button__link project__button">
+                                    <a href="https://github.com/JasDevelops/DojoDB" target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="View the DojoDB-API source code on GitHub">DojoDB API on GitHub</a>
+                                </div>
+                                <div class="button__link project__button">
+                                    <a href="https://dojo-db-e5c2cf5a1b56.herokuapp.com/" target="_blank"
+                                        rel="noopener noreferrer" aria-label="Visit the live DojoDB API">Live API</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </main>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="copyright">
+                    <p>JasDevelops 2025 © </p>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/jasmin-s-2232ab99/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit Jasmin's LinkedIn profile">
+                        <img src="img/linkedin.svg" alt="LinkedIn icon linking to Jasmin's LinkedIn profile">
+                    </a>
+                    <a href="https://x.com/JasminMadebyjas" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit Jasmin's X profile">
+                        <img src="img/x.svg" alt="x icon linking to Jasmin's x profile">
+                    </a>
+                    <a href="https://github.com/JasDevelops" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit Jasmin's GitHub profile">
+                        <img src="img/github.svg" alt="GitHub icon linking to Jasmin's GitHub profile">
+                    </a>
+                    <a href="https://medium.com/@madebyjas" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit Jasmin's Medium profile">
+                        <img src="img/medium.svg" alt="Medium icon linking to Jasmin's Medium profile">
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
+
+</html>
